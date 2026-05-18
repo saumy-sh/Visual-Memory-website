@@ -26,7 +26,9 @@ export function Nav() {
       }}
     >
       <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-        <div style={{ width: 32, height: 32, borderRadius: 10, background: 'linear-gradient(135deg, #8b5cf6, #3b82f6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, boxShadow: '0 0 16px rgba(139,92,246,0.5)' }}>✂️</div>
+        <div style={{ width: 32, height: 32, borderRadius: 10, background: 'linear-gradient(135deg, #8b5cf6, #3b82f6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, boxShadow: '0 0 16px rgba(139,92,246,0.5)' }}>
+          <img src="/icons/icon48.png" alt="Visual Memory" style={{ width: 18, height: 18 }} />
+        </div>
         <span style={{ fontSize: 19, letterSpacing: '-0.025em', color: '#fff', fontWeight: 700 }}>Visual Memory</span>
       </a>
 

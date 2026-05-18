@@ -20,7 +20,9 @@ const steps = [
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: 20, flexShrink: 0,
           boxShadow: '0 0 20px rgba(139,92,246,0.4)',
-        }}>✂️</div>
+        }}>
+          <img src="/icons/icon48.png" alt="Visual Memory" style={{ width: 20, height: 20 }} />
+        </div>
         <div>
           <div style={{ fontSize: 13, fontWeight: 600, color: '#fff', marginBottom: 2 }}>Visual Memory</div>
           <div style={{ fontSize: 11, color: 'rgba(237,233,254,0.4)' }}>Added to Chrome</div>
@@ -37,7 +39,11 @@ const steps = [
   {
     num: '02',
     title: 'Click the scissors',
-    description: 'Hit the ✂️ button in the floating dock to enter capture mode. Your cursor becomes a precision crosshair.',
+    description: (
+      <span>
+        Hit the <img src="/icons/icon16.png" alt="scissors" style={{ width: 14, height: 14, verticalAlign: 'middle' }} /> button in the floating dock to enter capture mode. Your cursor becomes a precision crosshair.
+      </span>
+    ),
     visual: (
       <div style={{ display: 'flex', justifyContent: 'center', gap: 24, alignItems: 'center' }}>
         <div style={{
@@ -45,7 +51,9 @@ const steps = [
           background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: 20, boxShadow: '0 0 24px rgba(139,92,246,0.5)',
-        }}>✂️</div>
+        }}>
+          <img src="/icons/icon48.png" alt="Visual Memory" style={{ width: 20, height: 20 }} />
+        </div>
         <div style={{ color: 'rgba(237,233,254,0.3)', fontSize: 12 }}>→</div>
         <div style={{
           padding: '8px 16px', borderRadius: 8,

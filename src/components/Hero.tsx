@@ -88,7 +88,9 @@ export function Hero() {
             ))}
           </div>
           <div style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, padding: '8px 6px', borderRadius: 14, background: 'rgba(13,10,26,0.85)', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(12px)', boxShadow: '0 4px 24px rgba(0,0,0,0.5)', animation: 'float 4s ease-in-out infinite' }}>
-            <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>✂️</div>
+            <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'linear-gradient(135deg, #6366f1, #8b5cf6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>
+              <img src="/icons/icon48.png" alt="Visual Memory" style={{ width: 18, height: 18 }} />
+            </div>
             <div style={{ position: 'relative', width: 32, height: 26 }}>
               {[0,1,2].map(i => (
                 <div key={i} style={{ position: 'absolute', bottom: 0, width: 32, height: 22, borderRadius: 4, background: `rgba(139,92,246,${0.5 - i * 0.12})`, border: '1px solid rgba(255,255,255,0.15)', transform: `rotate(${(i-1)*4}deg) translateY(${i*-2}px)`, zIndex: 3-i }} />

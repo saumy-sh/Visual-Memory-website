@@ -29,30 +29,29 @@ export function VideoSection() {
           {/* Subtle background glow */}
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 50%, rgba(139,92,246,0.1), transparent 70%)', pointerEvents: 'none' }} />
           
-          <div style={{ textAlign: 'center', zIndex: 1 }}>
-            <div style={{
-              width: 80, height: 80, borderRadius: '50%',
-              background: 'rgba(255,255,255,0.1)',
-              border: '1px solid rgba(255,255,255,0.2)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              margin: '0 auto 24px', cursor: 'pointer',
-              backdropFilter: 'blur(10px)',
-              transition: 'transform 0.3s, background 0.3s',
-            }}
-            onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.background = 'rgba(255,255,255,0.15)' }}
-            onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = 'rgba(255,255,255,0.1)' }}
-            >
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-            </div>
-            <h3 style={{ fontSize: 24, fontWeight: 600, color: '#fff', marginBottom: 8 }}>See it in action</h3>
-            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 16 }}>A quick 45-second tour of Visual Memory</p>
+          <div style={{ textAlign: 'center', zIndex: 2 }}>
+            <h3 style={{ fontSize: 24, fontWeight: 600, color: '#fff', marginBottom: 8 }}>This could be you</h3>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 16 }}>Why Visual Memory?</p>
           </div>
 
-          {/* Video Placeholder (actually would be a <video> tag) */}
+          <video
+            src="/assets/why_visual.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              objectFit: 'cover',
+              zIndex: 1,
+            }}
+          />
           <div style={{ 
             position: 'absolute', inset: 0, 
-            background: 'linear-gradient(45deg, rgba(139,92,246,0.05), rgba(59,130,246,0.05))',
-            zIndex: 0 
+            background: 'linear-gradient(45deg, rgba(139,92,246,0.18), rgba(59,130,246,0.18))',
+            mixBlendMode: 'overlay',
+            zIndex: 1 
           }} />
         </motion.div>
       </div>

@@ -17,15 +17,26 @@ export function Footer() {
           background: 'linear-gradient(135deg, #8b5cf6, #3b82f6)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontSize: 13,
-        }}>✂️</div>
+        }}>
+          <img src="/icons/icon48.png" alt="Visual Memory" style={{ width: 14, height: 14 }} />
+        </div>
         <span style={{
           fontSize: 16, color: 'rgba(237,233,254,0.6)', fontWeight: 600
         }}>Visual Memory</span>
       </div>
 
-      <p style={{ fontSize: 13, color: 'rgba(237,233,254,0.25)' }}>
-        Built with ✦ for deep web readers
-      </p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'center' }}>
+        <p style={{ fontSize: 13, color: 'rgba(237,233,254,0.25)', margin: 0 }}>
+          Built with ✦ for deep web readers
+        </p>
+
+        <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+          <span style={{ fontSize: 13, color: 'rgba(237,233,254,0.6)', fontWeight: 700 }}>Connect with me:</span>
+          <a href="https://discord.com/users/798370608558768150" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'rgba(237,233,254,0.6)', textDecoration: 'none' }}>Discord</a>
+          <a href="https://www.linkedin.com/in/saumysharan25" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'rgba(237,233,254,0.6)', textDecoration: 'none' }}>LinkedIn</a>
+          <a href="https://github.com/saumy-sh" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'rgba(237,233,254,0.6)', textDecoration: 'none' }}>GitHub</a>
+        </div>
+      </div>
 
       <div style={{ display: 'flex', gap: 24 }}>
         {['Features', 'How it works', 'Feedback'].map(link => (
