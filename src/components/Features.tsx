@@ -7,14 +7,14 @@ const features = [
     title: 'Drag to capture',
     description: 'Draw any rectangle on a webpage. The selected region is instantly captured as a crisp screenshot.',
     color: '#8b5cf6',
-    video: '/assets/drag_capture.mp4'
+    video: '/assets/drag-capture.mp4'
   },
   {
     icon: '🃏',
     title: 'Floating dock',
     description: 'Captures stack up in an elegant deck of cards on the side. Drag the dock anywhere on screen.',
     color: '#6366f1',
-    video: '/assets/drag_drop.mp4'
+    video: '/assets/drag-drop.mp4'
   },
   {
     icon: '🎠',
@@ -48,7 +48,13 @@ const features = [
 
 function FeatureCard({ feature, index }: { feature: typeof features[0]; index: number }) {
   const ref = useRef(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const inView = useInView(ref, { once: true, margin: '-60px' })
+
+  const handleMouseEnter = () => videoRef.current?.play()
+  const handleMouseLeave = () => videoRef.current?.pause()
+  const handleFocus = () => videoRef.current?.play()
+  const handleBlur = () => videoRef.current?.pause()
 
   return (
     <motion.div
@@ -72,6 +78,11 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
         borderColor: 'rgba(255,255,255,0.15)',
         boxShadow: `0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px ${feature.color}30`,
       }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      tabIndex={0}
     >
       <div style={{ display: 'flex', flex: 1, flexDirection: 'column' }}>
         <div style={{
@@ -113,11 +124,12 @@ function FeatureCard({ feature, index }: { feature: typeof features[0]; index: n
           zIndex: 0
         }} />
         <video
+          ref={videoRef}
           src={feature.video}
-          autoPlay
           loop
           muted
           playsInline
+          preload="metadata"
           style={{
             width: '100%',
             height: '100%',

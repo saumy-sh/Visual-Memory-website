@@ -10,13 +10,28 @@ export function Feedback() {
   const [status, setStatus] = useState<Status>('idle')
   const [focused, setFocused] = useState<string | null>(null)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!form.message.trim()) return
+    const formElement = e.currentTarget
+
+    if (!formElement.checkValidity() || !form.message.trim()) {
+      formElement.reportValidity()
+      return
+    }
+
     setStatus('sending')
 
-    // Simulate send (replace with real endpoint e.g. formspree/resend)
-    await new Promise(r => setTimeout(r, 1400))
+    const recipient = 'zoomershredder@gmail.com'
+    const subject = encodeURIComponent(`[MemoryPane] ${form.type} feedback from ${form.name}`)
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nType: ${form.type}\n\n${form.message}`
+    )
+    const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`
+
+    window.location.href = mailtoUrl
+
+    // Simulate send feedback state while the user's mail client opens
+    await new Promise(r => setTimeout(r, 800))
     setStatus('sent')
     setForm({ name: '', email: '', type: 'feedback', message: '' })
     setTimeout(() => setStatus('idle'), 5000)
@@ -112,7 +127,7 @@ export function Feedback() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
             <div>
               <label style={{ fontSize: 12, color: 'rgba(237,233,254,0.4)', display: 'block', marginBottom: 7, letterSpacing: '0.02em' }}>
-                Name <span style={{ color: 'rgba(237,233,254,0.2)' }}>(optional)</span>
+                Name <span style={{ color: '#ef4444' }}>*</span>
               </label>
               <input
                 type="text"
@@ -121,12 +136,13 @@ export function Feedback() {
                 onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                 onFocus={() => setFocused('name')}
                 onBlur={() => setFocused(null)}
+                required
                 style={inputStyle('name')}
               />
             </div>
             <div>
               <label style={{ fontSize: 12, color: 'rgba(237,233,254,0.4)', display: 'block', marginBottom: 7, letterSpacing: '0.02em' }}>
-                Email <span style={{ color: 'rgba(237,233,254,0.2)' }}>(optional)</span>
+                Email <span style={{ color: '#ef4444' }}>*</span>
               </label>
               <input
                 type="email"
@@ -135,6 +151,7 @@ export function Feedback() {
                 onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                 onFocus={() => setFocused('email')}
                 onBlur={() => setFocused(null)}
+                required
                 style={inputStyle('email')}
               />
             </div>
