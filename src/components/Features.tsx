@@ -7,42 +7,42 @@ const features = [
     title: 'Drag to capture',
     description: 'Draw any rectangle on a webpage. The selected region is instantly captured as a crisp screenshot.',
     color: '#8b5cf6',
-    video: '../assets/drag_capture.mp4'
+    video: '/assets/drag_capture.mp4'
   },
   {
     icon: '🃏',
     title: 'Floating dock',
     description: 'Captures stack up in an elegant deck of cards on the side. Drag the dock anywhere on screen.',
     color: '#6366f1',
-    video: '../assets/drag_drop.mp4'
+    video: '/assets/drag_drop.mp4'
   },
   {
     icon: '🎠',
     title: 'Arched carousel',
     description: 'Click the stack to fan out a beautifully arched vertical carousel. Scroll through all your captures.',
     color: '#3b82f6',
-    video: '../assets/carousel.mp4'
+    video: '/assets/carousel.mp4'
   },
   {
     icon: '↩',
     title: 'Navigate to source',
     description: 'One click scrolls the page back to the exact location where the screenshot was taken. Centered perfectly.',
     color: '#8b5cf6',
-    video: '../assets/source.mp4'
+    video: '/assets/source.mp4'
   },
   {
     icon: '🔍',
     title: 'Expandable preview',
     description: 'Click any capture to open a resizable, draggable preview window — without blurring the page behind it.',
     color: '#6366f1',
-    video: '../assets/preview.mp4'
+    video: '/assets/preview.mp4'
   },
   {
     icon: '💾',
     title: 'Persists across sessions',
     description: 'Captures are saved per-page. Come back to any tab and your screenshots are exactly where you left them.',
     color: '#3b82f6',
-    video: '../assets/memory.mp4'
+    video: '/assets/memory.mp4'
   },
 ]
 
