@@ -29,10 +29,9 @@ export function sendCustomEmail(details: SendDetails) {
   initEmailJS()
 
   const templateParams = {
+    ...details,
     to_email: details.to_email,
     subject: details.subject,
-    message: details.message,
-    ...details,
   }
 
   if (!SERVICE_ID || !TEMPLATE_ID) {
