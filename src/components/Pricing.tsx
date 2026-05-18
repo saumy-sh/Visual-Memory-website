@@ -42,7 +42,7 @@ export function Pricing() {
           <div style={{ fontSize: 14, fontWeight: 700, color: '#c4b5fd', marginBottom: 8 }}>Premium (coming soon)</div>
           <div style={{ fontSize: 22, fontWeight: 800, color: '#fff', marginBottom: 10 }}>Affordable</div>
           <p style={{ color: 'rgba(237,233,254,0.5)', marginBottom: 12 }}>
-            Planned premium features will include advanced workflows and priority support. Pricing will be set based on community input to remain affordable.
+            Planned premium features will include features like advanced OCR and much more. Pricing will be set based on community input to remain affordable. Your feedback matters — let us know what you'd like to see in the premium tier!
           </p>
         </div>
       </div>
