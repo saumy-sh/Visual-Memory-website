@@ -5,7 +5,7 @@ const steps = [
   {
     num: '01',
     title: 'Install the extension',
-    description: 'Add MemoryPane to Chrome in one click. No account needed, no sign-up, completely free.',
+    description: 'Add Visual Memory to Chrome in one click. No account needed, no sign-up, completely free.',
     visual: (
       <div style={{
         padding: '20px 24px',

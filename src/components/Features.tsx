@@ -179,14 +179,14 @@ export function Features() {
             lineHeight: 1, fontWeight: 800, letterSpacing: '-0.03em',
             marginBottom: 20, color: '#fff',
           }}>
-            Powerful features for<br />
-            <span style={{ background: 'linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>modern workflows.</span>
+            Tools that fit the way<br />
+            <span style={{ background: 'linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>modern professionals learn and research.</span>
           </h2>
           <p style={{
             fontSize: 18, color: 'rgba(237,233,254,0.5)',
             maxWidth: 540, margin: '0 auto', fontWeight: 400,
           }}>
-            Capture, organize, and revisit web content with unparalleled speed and elegance.
+            Drag to capture any region of a webpage. Screenshots float in a sleek dock — always there, never in the way. Navigate back to the exact spot with one click.
           </p>
         </motion.div>
 

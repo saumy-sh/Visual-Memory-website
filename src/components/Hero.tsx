@@ -53,7 +53,7 @@ export function Hero() {
       </motion.h1>
 
       <motion.p initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3, ease }} style={{ fontSize: 'clamp(16px, 2vw, 20px)', color: 'rgba(237,233,254,0.65)', maxWidth: 540, marginBottom: 44, fontWeight: 400, lineHeight: 1.6 }}>
-        Drag to capture any region of a webpage. Screenshots float in a sleek dock — always there, never in the way. Navigate back to the exact spot with one click.
+       Capture insights faster. Recall them instantly. 
       </motion.p>
 
       <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4, ease }} style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>

@@ -22,7 +22,7 @@ export function Feedback() {
     setStatus('sending')
 
     const recipient = 'zoomershredder@gmail.com'
-    const subject = encodeURIComponent(`[MemoryPane] ${form.type} feedback from ${form.name}`)
+    const subject = encodeURIComponent(`[Visual Memory] ${form.type} feedback from ${form.name}`)
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nType: ${form.type}\n\n${form.message}`
     )
@@ -97,7 +97,7 @@ export function Feedback() {
             marginBottom: 16,
           }}>
             Help shape<br />
-            <em style={{ color: 'rgba(167,139,250,0.9)' }}>MemoryPane.</em>
+            <em style={{ color: 'rgba(167,139,250,0.9)' }}>Visual Memory.</em>
           </h2>
           <p style={{
             fontSize: 15.5, color: 'rgba(237,233,254,0.5)',
@@ -193,7 +193,7 @@ export function Feedback() {
               Message <span style={{ color: '#ef4444' }}>*</span>
             </label>
             <textarea
-              placeholder="Tell me what you think, what broke, or what you wish MemoryPane could do..."
+              placeholder="Tell me what you think, what broke, or what you wish Visual Memory could do..."
               value={form.message}
               onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
               onFocus={() => setFocused('message')}
