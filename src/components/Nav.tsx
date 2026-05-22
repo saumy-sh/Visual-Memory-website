@@ -25,7 +25,7 @@ export function Nav() {
         borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
       }}
     >
-      <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+      <a href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
         <div style={{ width: 32, height: 32, borderRadius: 10, background: 'linear-gradient(135deg, #8b5cf6, #3b82f6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16, boxShadow: '0 0 16px rgba(139,92,246,0.5)' }}>
           <img src="/icons/icon48.png" alt="Visual Memory" style={{ width: 18, height: 18 }} />
         </div>
@@ -34,7 +34,7 @@ export function Nav() {
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
         {['Features', 'Pricing', 'How it works', 'Feedback'].map(link => (
-          <a key={link} href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
+          <a key={link} href={`/#${link.toLowerCase().replace(/\s+/g, '-')}`}
             style={{ fontSize: 14, color: 'rgba(237,233,254,0.6)', transition: 'color 0.2s', fontWeight: 400, textDecoration: 'none' }}
             onMouseEnter={e => (e.currentTarget.style.color = '#ede9fe')}
             onMouseLeave={e => (e.currentTarget.style.color = 'rgba(237,233,254,0.6)')}

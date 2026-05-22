@@ -1,25 +1,14 @@
-import { Nav } from './components/Nav'
-import { Hero } from './components/Hero'
-import { VideoSection } from './components/VideoSection'
-import { Features } from './components/Features'
-import { HowItWorks } from './components/HowItWorks'
-import { Pricing } from './components/Pricing'
-import { Feedback } from './components/Feedback'
-import { Footer } from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home } from './Home'
+import { Privacy } from './components/Privacy'
 
 export default function App() {
   return (
-    <>
-      <Nav />
-      <main>
-        <Hero />
-        <VideoSection />
-        <Features />
-        <HowItWorks />
-        <Pricing />
-        <Feedback />
-      </main>
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<Privacy />} />
+      </Routes>
+    </Router>
   )
 }
