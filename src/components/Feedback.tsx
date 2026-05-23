@@ -151,6 +151,8 @@ export function Feedback() {
             display: 'flex', flexDirection: 'column', gap: 20,
           }}
         >
+          <input type="hidden" name="subject" value={`Visual Memory : ${form.type}`} />
+          <input type="hidden" name="type" value={form.type} />
           {/* Name + Email row */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
             <div>
@@ -159,6 +161,7 @@ export function Feedback() {
               </label>
               <input
                 type="text"
+                name="name"
                 placeholder="Your name"
                 value={form.name}
                 onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
@@ -174,6 +177,7 @@ export function Feedback() {
               </label>
               <input
                 type="email"
+                name="email"
                 placeholder="you@example.com"
                 value={form.email}
                 onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
@@ -221,6 +225,7 @@ export function Feedback() {
               Message <span style={{ color: '#ef4444' }}>*</span>
             </label>
             <textarea
+              name="message"
               placeholder="Tell me what you think, what broke, or what you wish Visual Memory could do..."
               value={form.message}
               onChange={e => setForm(f => ({ ...f, message: e.target.value }))}

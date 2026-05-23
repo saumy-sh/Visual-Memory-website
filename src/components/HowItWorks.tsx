@@ -129,6 +129,59 @@ const steps = [
       </div>
     ),
   },
+  {
+    num: '05',
+    title: 'Preview and return to source',
+    description: 'Click any screenshot in the carousel to open its full-sized preview. Simply hit the "Source" button to instantly navigate and scroll back to the exact webpage location where it was captured.',
+    visual: (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <div style={{
+          background: 'rgba(255,255,255,0.02)',
+          border: '1px solid rgba(255,255,255,0.08)',
+          borderRadius: 12,
+          padding: '12px 16px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 12,
+          boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+        }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ fontSize: 12, color: 'rgba(237,233,254,0.4)', fontWeight: 500 }}>Screenshot Preview</span>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+              background: 'linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(139,92,246,0.2) 100%)',
+              border: '1px solid rgba(99,102,241,0.4)',
+              borderRadius: 6,
+              padding: '4px 10px',
+              fontSize: 12,
+              color: '#a5b4fc',
+              fontWeight: 600,
+              boxShadow: '0 0 12px rgba(99,102,241,0.25)',
+              cursor: 'default',
+            }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: 2 }}><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              Source
+            </div>
+          </div>
+          <div style={{
+            height: 56,
+            borderRadius: 6,
+            background: 'linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.05) 100%)',
+            border: '1.5px dashed rgba(255,255,255,0.1)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <div style={{ fontSize: 11, color: 'rgba(237,233,254,0.4)', fontWeight: 400 }}>
+              Original page context captured
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  },
 ]
 
 export function HowItWorks() {
@@ -161,7 +214,7 @@ export function HowItWorks() {
             fontSize: 'clamp(34px, 5vw, 52px)',
             lineHeight: 1, fontWeight: 800, letterSpacing: '-0.03em',
           }}>
-            Four steps to<br />
+            Five steps to<br />
             <span style={{ color: '#60a5fa' }}>never lose context.</span>
           </h2>
         </motion.div>

@@ -33,7 +33,7 @@ export function Nav() {
       </a>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
-        {['Features', 'Pricing', 'How it works', 'Feedback'].map(link => (
+        {['Features', 'How it works', 'Pricing', 'Feedback'].map(link => (
           <a key={link} href={`/#${link.toLowerCase().replace(/\s+/g, '-')}`}
             style={{ fontSize: 14, color: 'rgba(237,233,254,0.6)', transition: 'color 0.2s', fontWeight: 400, textDecoration: 'none' }}
             onMouseEnter={e => (e.currentTarget.style.color = '#ede9fe')}

@@ -172,7 +172,7 @@ export function Features() {
             fontSize: 13, color: '#c4b5fd',
             letterSpacing: '0.05em', textTransform: 'uppercase',
             fontWeight: 600, marginBottom: 24,
-          }}>Capabilities</div>
+          }}>The Solution</div>
 
           <h2 style={{
             fontSize: 'clamp(36px, 5vw, 56px)',
