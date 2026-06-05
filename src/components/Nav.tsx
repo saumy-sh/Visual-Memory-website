@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { AuthButton } from './AuthButton'
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -45,6 +46,7 @@ export function Nav() {
           onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-1px)'; e.currentTarget.style.boxShadow = '0 0 28px rgba(139,92,246,0.55)' }}
           onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 0 20px rgba(139,92,246,0.35)' }}
         >Add to Chrome</a>
+        <AuthButton />
       </div>
     </motion.nav>
   )
