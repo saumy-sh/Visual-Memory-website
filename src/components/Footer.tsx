@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export function Footer() {
   return (
     <footer style={{
@@ -48,12 +50,20 @@ export function Footer() {
             onMouseLeave={e => (e.currentTarget.style.color = 'rgba(237,233,254,0.3)')}
           >{link}</a>
         ))}
-        <a
-          href="/privacy"
-          style={{ fontSize: 13, color: 'rgba(237,233,254,0.3)', transition: 'color 0.2s', textDecoration: 'none' }}
-          onMouseEnter={e => (e.currentTarget.style.color = 'rgba(237,233,254,0.7)')}
-          onMouseLeave={e => (e.currentTarget.style.color = 'rgba(237,233,254,0.3)')}
-        >Privacy Policy</a>
+        <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+          <Link
+            to="/terms"
+            style={{ fontSize: 13, color: 'rgba(237,233,254,0.3)', transition: 'color 0.2s', textDecoration: 'none' }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(237,233,254,0.7)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(237,233,254,0.3)')}
+          >Terms of Service</Link>
+          <Link
+            to="/privacy"
+            style={{ fontSize: 13, color: 'rgba(237,233,254,0.3)', transition: 'color 0.2s', textDecoration: 'none' }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'rgba(237,233,254,0.7)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'rgba(237,233,254,0.3)')}
+          >Privacy Policy</Link>
+        </div>
       </div>
     </footer>
   )
