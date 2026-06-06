@@ -6,7 +6,6 @@ export function AuthButton() {
   const { user, isLoaded, isSignedIn } = useUser();
   const { getToken } = useAuth();
   const [syncing, setSyncing] = useState(false);
-  const [tier, setTier] = useState<string>('');
 
   useEffect(() => {
     if (isLoaded && isSignedIn && user?.primaryEmailAddress?.emailAddress) {
@@ -40,7 +39,7 @@ export function AuthButton() {
       `;
 
       if (result && result.length > 0) {
-        setTier(result[0].subscription_tier);
+        // tier logic removed to prevent unused variable error
       }
     } catch (err) {
       console.error('Failed to sync user directly to Neon:', err);
